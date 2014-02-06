@@ -9,6 +9,9 @@ setup(
     url='http://tangledframework.org/',
     author='Wyatt Baldwin',
     author_email='self@wyattbaldwin.com',
+    packages=[
+        'tangled.sqlalchemy',
+    ],
     install_requires=[
         'tangled>=0.1.dev0',
         'SQLAlchemy',
