@@ -1,4 +1,4 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 
 
 setup(
@@ -9,20 +9,19 @@ setup(
     url='http://tangledframework.org/',
     author='Wyatt Baldwin',
     author_email='self@wyattbaldwin.com',
-    packages=find_packages(),
-    install_requires=(
+    install_requires=[
         'tangled>=0.1.dev0',
         'SQLAlchemy',
-    ),
+    ],
     extras_require={
-        'dev': (
+        'dev': [
             'tangled[dev]',
-        ),
+        ],
     },
-    classifiers=(
+    classifiers=[
         'Development Status :: 1 - Planning',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
-    ),
+    ],
 )
