@@ -5,6 +5,8 @@ from sqlalchemy.engine import create_engine
 from sqlalchemy.engine.url import make_url, URL
 from sqlalchemy.orm.session import sessionmaker
 
+from tangled.settings import parse_settings
+
 
 
 log = logging.getLogger(__name__)
@@ -24,7 +26,7 @@ def include(app):
         'make_engine': make_engine,
         'make_session_factory': make_session_factory,
     }
-    settings = app.parse_settings(
+    settings = parse_settings(
         app.settings, conversion_map=conversion_map, defaults=defaults,
         prefix='sqlalchemy.')
 
