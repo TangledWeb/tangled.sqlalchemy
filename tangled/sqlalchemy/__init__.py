@@ -8,7 +8,6 @@ from sqlalchemy.orm.session import sessionmaker
 from tangled.settings import parse_settings
 
 
-
 log = logging.getLogger(__name__)
 
 
