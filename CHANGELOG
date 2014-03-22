@@ -1,7 +1,13 @@
-0.1a3 (unreleased)
+0.1a3 (2014-03-22)
 ==================
 
-- No changes yet
+- Use `tangled.settings.parse_settings()` directly instead of via
+  `Application.parse_settings()`. The latter was removed from tangled.web in
+  version 0.1a8.
+- Improve/fix package metadata
+- Upgrade tangled from 0.1a5 to 0.1a7
+- Remove tangled.web from Buildout develop list and from Travis CI config.
+  This package doesn't depend directly on tangled.web.
 
 
 0.1a2 (2014-02-09)
