@@ -4,7 +4,6 @@ python:
 install:
   - pip install zc.buildout
   - git clone git://github.com/TangledWeb/tangled ../tangled
-  - git clone git://github.com/TangledWeb/tangled.web ../tangled.web
   - buildout
 script:
   - ./bin/tangled test
