@@ -5,6 +5,7 @@ from sqlalchemy.engine import create_engine
 from sqlalchemy.engine.url import make_url, URL
 from sqlalchemy.orm.session import sessionmaker
 
+from tangled.decorators import cached_property
 from tangled.settings import parse_settings
 
 
@@ -38,6 +39,7 @@ def include(app):
     def make_db_session(request):
         return request.app['sqlalchemy.session_factory']()
 
+    @cached_property
     def db_session(request):
         session = request.make_db_session()
         request.on_finished(close, session)
@@ -68,7 +70,7 @@ def include(app):
             session.close()
 
     app.add_request_attribute(make_db_session)
-    app.add_request_attribute(db_session, reify=True)
+    app.add_request_attribute(db_session)
     app.add_request_attribute(managed_db_session)
 
 
