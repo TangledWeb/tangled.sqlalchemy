@@ -15,12 +15,12 @@ setup(
         'tangled.sqlalchemy',
     ],
     install_requires=[
-        'tangled>=0.1a7',
+        'tangled>=0.1a9',
         'SQLAlchemy',
     ],
     extras_require={
         'dev': [
-            'tangled[dev]>=0.1a7',
+            'tangled[dev]>=0.1a9',
         ],
     },
     classifiers=[
