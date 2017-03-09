@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='tangled.sqlalchemy',
-    version='0.1a4',
+    version='0.1a5.dev0',
     description='Tangled SQLAlchemy integration',
     long_description=open('README.rst').read(),
     url='http://tangledframework.org/',
