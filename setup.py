@@ -12,7 +12,7 @@ setup(
     author_email='self@wyattbaldwin.com',
     packages=PEP420PackageFinder.find(include=['tangled*']),
     install_requires=[
-        'tangled>=0.1a9',
+        'tangled>=1.0a12',
         'SQLAlchemy',
     ],
     classifiers=[
