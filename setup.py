@@ -15,11 +15,6 @@ setup(
         'tangled>=0.1a9',
         'SQLAlchemy',
     ],
-    extras_require={
-        'dev': [
-            'tangled[dev]>=0.1a9',
-        ],
-    },
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
