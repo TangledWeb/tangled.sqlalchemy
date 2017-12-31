@@ -1,19 +1,16 @@
-from setuptools import setup
+from setuptools import setup, PEP420PackageFinder
 
 
 setup(
     name='tangled.sqlalchemy',
-    version='0.1a6.dev0',
+    version='1.0a6.dev0',
     description='Tangled SQLAlchemy integration',
     long_description=open('README.rst').read(),
-    url='http://tangledframework.org/',
+    url='https://tangledframework.org/',
     download_url='https://github.com/TangledWeb/tangled.sqlalchemy/tags',
     author='Wyatt Baldwin',
     author_email='self@wyattbaldwin.com',
-    packages=[
-        'tangled',
-        'tangled.sqlalchemy',
-    ],
+    packages=PEP420PackageFinder.find(include=['tangled*']),
     install_requires=[
         'tangled>=0.1a9',
         'SQLAlchemy',
